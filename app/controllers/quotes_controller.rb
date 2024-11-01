@@ -1,5 +1,5 @@
 class QuotesController < ApplicationController
-  before_action :set_quote, only: i%[show, edit, update, destroy]
+  before_action :set_quote, only: [:show, :edit, :update, :destroy]
 
   def index
     @quotes = Quote.all
@@ -27,7 +27,7 @@ class QuotesController < ApplicationController
     #edit
   end
 
-  def uptate
+  def update
     if @quote.update(quote_params)
       redirect_to quotes_path, notice: "Quote was successfully updated."
     end
