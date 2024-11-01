@@ -14,10 +14,10 @@ class QuotesController < ApplicationController
   end
 
   def create
-    @quote = Quote.new(quote_params)
+    @quote = Quote.new(quotes_params)
 
     if @quote.save
-      redirect_to quote_path, notice: "Quote was successfully created."
+      redirect_to quotes_path, notice: "Quote was successfully created."
     else
       render :new
     end
@@ -28,7 +28,7 @@ class QuotesController < ApplicationController
   end
 
   def update
-    if @quote.update(quote_params)
+    if @quote.update(quotes_params)
       redirect_to quotes_path, notice: "Quote was successfully updated."
     end
   end

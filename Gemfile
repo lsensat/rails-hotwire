@@ -30,6 +30,10 @@ gem "cssbundling-rails"
 gem "jbuilder"
 
 gem "simple_form"
+gem "bootstrap"
+gem "autoprefixer-rails"
+gem "jquery-rails"
+gem "popper_js"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
