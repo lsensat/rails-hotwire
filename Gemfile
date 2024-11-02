@@ -29,9 +29,13 @@ gem "cssbundling-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem "simple_form"
-gem "bootstrap"
-gem "autoprefixer-rails"
+gem 'sassc-rails'
+gem 'bootstrap'
+gem 'font-awesome-sass'
+gem 'simple_form'
+gem 'autoprefixer-rails'
+gem 'dotenv-rails'
+# gem "bootstrap"
 gem "jquery-rails"
 gem "popper_js"
 
