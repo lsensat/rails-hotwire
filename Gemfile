@@ -38,6 +38,7 @@ gem 'dotenv-rails'
 # gem "bootstrap"
 gem "jquery-rails"
 gem "popper_js"
+gem "importmap-rails"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
