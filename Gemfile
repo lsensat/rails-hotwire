@@ -39,6 +39,7 @@ gem 'dotenv-rails'
 gem "jquery-rails"
 gem "popper_js"
 gem "importmap-rails"
+gem "devise"
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", ">= 4.0.1"
