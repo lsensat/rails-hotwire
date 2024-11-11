@@ -3,7 +3,7 @@ class QuotesController < ApplicationController
 
   def index
     # @quotes = Quote.all
-    @quotes = Quote.ordered
+    @quotes = current_company.quotes.ordered
   end
 
   def show
@@ -15,7 +15,7 @@ class QuotesController < ApplicationController
   end
 
   def create
-    @quote = Quote.new(quotes_params)
+    @quote = current_company.quotes.build(quotes_params)
 
     if @quote.save
       respond_to do |format|
@@ -49,7 +49,7 @@ class QuotesController < ApplicationController
   private
 
   def set_quote
-    @quote = Quote.find(params[:id])
+    @quote = current_company.quotes.find(params[:id])
   end
 
   def quotes_params
