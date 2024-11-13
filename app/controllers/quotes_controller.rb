@@ -33,7 +33,10 @@ class QuotesController < ApplicationController
 
   def update
     if @quote.update(quotes_params)
-      redirect_to quotes_path, notice: "Quote was successfully updated."
+      respond_to do |format|
+        format.html { redirect_to quotes_path, notice: "Quote was successfully updated." }
+        format.turbo_stream { flash.now[:notice] = "Quote was successfully updated." }
+      end
     end
   end
 
